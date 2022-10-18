@@ -1,4 +1,4 @@
-# mobile_robot_sim_setup
+# manipulator_sim_setup
 Setup for simulating Two-link manipulator in Coppleiasim(V-REP)
 
 ## Setup:
