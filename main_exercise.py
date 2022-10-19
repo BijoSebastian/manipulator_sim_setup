@@ -98,8 +98,17 @@ def main():
                 if sim_interface.collission_check():
                     print("Exercise 2 result: Failed")
                     return
-                
-            print("Exercise 2 result: Success")
+
+            #Obtain end effector position
+            end_effector_position = sim_interface.get_end_effector_position()            
+            
+            #Verify
+            difference_norm = math.fabs(goal_position[0] - end_effector_position[0]) + math.fabs(goal_position[1] - end_effector_position[1]) 
+            if difference_norm < 0.001:
+                print("Exercise 2 result: Success")
+            else:
+                print("Exercise 2 result: Failed")
+                return    
             
             #Exercise 3
             #Move the manipulator along global x axis for 0.5m to reach goal 3
